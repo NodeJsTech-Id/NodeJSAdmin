@@ -1,8 +1,8 @@
 const express = require("express")
 const modules = require("./modules")
 require('dotenv').config()
-
-const app = express()
+const app = require("./app")
+const server = express()
 // const route = express.Router()
 // app.set("view engine", "ejs")
 // function testing(req, res){
@@ -25,6 +25,6 @@ const app = express()
     //     "title": "Hello World"
     // })
 // }
-
-app.use("/admin/v1/dashboard",modules.dashboard.routes.v1.web)
-app.listen(process.env.PORT)
+app.functions.loginByAxios()
+server.use("/admin/v1/dashboard",modules.dashboard.routes.v1.web)
+server.listen(process.env.PORT)
