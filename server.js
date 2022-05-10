@@ -1,5 +1,6 @@
 const express = require("express")
 const modules = require("./modules")
+require('dotenv').config()
 
 const app = express()
 // const route = express.Router()
@@ -25,5 +26,5 @@ const app = express()
     // })
 // }
 
-app.use("/admin/v1/dashboard",modules.dashboard.routes.coba)
-app.listen(8080)
+app.use("/admin/v1/dashboard",modules.dashboard.routes.v1.web)
+app.listen(process.env.PORT)

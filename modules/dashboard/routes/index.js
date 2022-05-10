@@ -1,10 +1,3 @@
-const express = require("express")
-const coba = express.Router()
+const v1 = require("./v1")
 
-coba.get("/", (req, res) => {
-    res.send("Modules")
-})
-
-module.exports = {
-    coba
-}
+module.exports = v1

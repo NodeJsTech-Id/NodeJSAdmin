@@ -1,19 +1,10 @@
 const express = require("express")
-const route = express.Router();
+const web = express.Router();
 
-route.get("/satu", (req, res) => {
+web.get("/satu", (req, res) => {
     res.send("Satu")
 })
 
-route.get("/dua", (req, res) => {
-    res.send("Dua")
-})
+// web.get("/login", controller.login)
 
-function testing(){
-    return "Route Web Nih"
-}
-
-module.exports = {
-    route,
-    testing
-}
+module.exports = web
